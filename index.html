@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090b18" />
+  <title>Neon Arcade — Find Your Next Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Neon Arcade home">
+        <span class="brand-mark">N<span>✦</span></span>
+        <span>NEON<span class="brand-accent">ARCADE</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="active" href="#discover">Discover</a>
+        <a href="#game-library">Game library</a>
+      </nav>
+      <a class="top-cta" href="#game-library">Let's play <span>↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="discover">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse-dot"></span> YOUR NEXT OBSESSION STARTS HERE</div>
+          <h1>LEVEL UP<br>YOUR <span class="gradient-text">PLAYTIME.</span></h1>
+          <p class="hero-description">Big adventures. Legendary battles. Zero boring moments. Find a game that matches your mood.</p>
+          <a class="hero-button" href="#game-library">Explore games <span>↓</span></a>
+          <div class="hero-proof">
+            <div class="avatar-stack"><span>🎮</span><span>👾</span><span>🚀</span></div>
+            <p><strong>8 epic games</strong><br><span>and more fun to discover</span></p>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Decorative gaming illustration">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="hero-spark spark-one">✦</div>
+          <div class="hero-spark spark-two">✧</div>
+          <div class="hero-console">🎮</div>
+          <div class="float-tag tag-top">PLAYER 1 <span>● ONLINE</span></div>
+          <div class="float-tag tag-bottom">READY? <span>LET'S GO!</span></div>
+          <div class="hero-sticker">PRESS<br><b>START</b></div>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="Arcade highlights">
+        <div><strong>08</strong><span>HAND-PICKED GAMES</span></div>
+        <div><strong>∞</strong><span>HOURS OF FUN</span></div>
+        <div><strong>100%</strong><span>GOOD VIBES</span></div>
+      </section>
+
+      <section class="library-section" id="game-library">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">THE GAME ZONE</div>
+            <h2>Pick your <span class="gradient-text">battle.</span></h2>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Search games..." aria-label="Search games">
+            <kbd>⌘ K</kbd>
+          </label>
+        </div>
+
+        <div class="toolbar">
+          <div class="filter-list" role="group" aria-label="Filter games">
+            <button class="filter-chip active" data-filter="all">✦ All games</button>
+            <button class="filter-chip" data-filter="shooter">🎯 Shooter</button>
+            <button class="filter-chip" data-filter="adventure">🗺️ Adventure</button>
+            <button class="filter-chip" data-filter="sandbox">🧱 Sandbox</button>
+            <button class="filter-chip" data-filter="sports">⚽ Sports</button>
+          </div>
+          <button class="favorites-toggle" id="favoritesToggle" aria-pressed="false">♡ Favorites only</button>
+        </div>
+
+        <!-- The game cards are written in HTML. JavaScript only filters and updates them. -->
+        <div class="game-grid" id="gameGrid" aria-live="polite">
+          <article class="game-card" data-category="shooter" data-title="Counter-Strike 2" data-genre="Tactical shooter">
+            <div class="game-art">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg" alt="Counter-Strike 2 game artwork" loading="lazy">
+              <span class="art-label">TACTICAL</span><span class="art-number">01</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">Counter-Strike 2</h3><button class="favorite-btn" data-favorite aria-label="Add Counter-Strike 2 to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Tactical shooter</span><span class="game-rating">⭐ 9.5</span></div>
+              <p class="game-description">Lock in, team up, and clutch the round. One shot can change everything.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+
+          <article class="game-card" data-category="shooter" data-title="PUBG: Battlegrounds" data-genre="Battle royale">
+            <div class="game-art">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/578080/header.jpg" alt="PUBG Battlegrounds game artwork" loading="lazy">
+              <span class="art-label">BATTLE ROYALE</span><span class="art-number">02</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">PUBG: Battlegrounds</h3><button class="favorite-btn" data-favorite aria-label="Add PUBG to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Battle royale</span><span class="game-rating">⭐ 9.2</span></div>
+              <p class="game-description">Drop onto the island, find your gear, and try to be the last one standing.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+
+          <article class="game-card" data-category="adventure" data-title="Grand Theft Auto V" data-genre="Open-world action">
+            <div class="game-art">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg" alt="Grand Theft Auto V game artwork" loading="lazy">
+              <span class="art-label">OPEN WORLD</span><span class="art-number">03</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">Grand Theft Auto V</h3><button class="favorite-btn" data-favorite aria-label="Add GTA V to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Open-world action</span><span class="game-rating">⭐ 9.4</span></div>
+              <p class="game-description">Explore a huge city, take on wild missions, and make your own story.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+
+          <article class="game-card" data-category="sandbox" data-title="Minecraft" data-genre="Sandbox adventure">
+            <div class="game-art">
+              <img src="https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=900&q=85" alt="Block-building game world inspired by Minecraft" loading="lazy">
+              <span class="art-label">BUILD & EXPLORE</span><span class="art-number">04</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">Minecraft</h3><button class="favorite-btn" data-favorite aria-label="Add Minecraft to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Sandbox adventure</span><span class="game-rating">⭐ 9.8</span></div>
+              <p class="game-description">Mine, craft, build, and survive. Your imagination is the only limit.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+
+          <article class="game-card" data-category="shooter" data-title="Fortnite" data-genre="Battle royale">
+            <div class="game-art">
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85" alt="Colorful esports gaming arena representing Fortnite" loading="lazy">
+              <span class="art-label">BATTLE ROYALE</span><span class="art-number">05</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">Fortnite</h3><button class="favorite-btn" data-favorite aria-label="Add Fortnite to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Battle royale</span><span class="game-rating">⭐ 9.3</span></div>
+              <p class="game-description">Build, battle, dance, and jump into a colorful world of surprises.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+
+          <article class="game-card" data-category="sports" data-title="Rocket League" data-genre="Car soccer">
+            <div class="game-art">
+              <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=85" alt="Gaming setup representing Rocket League" loading="lazy">
+              <span class="art-label">SPORTS</span><span class="art-number">06</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">Rocket League</h3><button class="favorite-btn" data-favorite aria-label="Add Rocket League to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Car soccer</span><span class="game-rating">⭐ 9.1</span></div>
+              <p class="game-description">Put rocket-powered cars on a football pitch. Chaos? Absolutely.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+
+          <article class="game-card" data-category="sandbox" data-title="Roblox" data-genre="Creative platform">
+            <div class="game-art">
+              <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=900&q=85" alt="Colorful gaming computer setup representing Roblox" loading="lazy">
+              <span class="art-label">CREATE & PLAY</span><span class="art-number">07</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">Roblox</h3><button class="favorite-btn" data-favorite aria-label="Add Roblox to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Creative platform</span><span class="game-rating">⭐ 9.0</span></div>
+              <p class="game-description">Jump between player-made worlds, mini-games, and creative adventures.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+
+          <article class="game-card" data-category="sports" data-title="EA SPORTS FC" data-genre="Football simulation">
+            <div class="game-art">
+              <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=85" alt="Football stadium representing EA Sports FC" loading="lazy">
+              <span class="art-label">SPORTS</span><span class="art-number">08</span>
+            </div>
+            <div class="game-info">
+              <div class="game-title-row"><h3 class="game-title">EA SPORTS FC</h3><button class="favorite-btn" data-favorite aria-label="Add EA SPORTS FC to favorites" aria-pressed="false">♡</button></div>
+              <div class="game-meta"><span>Football simulation</span><span class="game-rating">⭐ 8.9</span></div>
+              <p class="game-description">Build your dream team, master your skills, and score a last-minute winner.</p>
+              <button class="play-btn" data-play>▶ <span>Game details</span></button>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState" hidden>No games found. Try another search! 👾</p>
+      </section>
+
+      <section class="challenge-banner">
+        <div class="challenge-icon">🏆</div>
+        <div>
+          <span class="eyebrow">WEEKEND CHALLENGE</span>
+          <h2>Game on. Make it legendary.</h2>
+          <p>Pick a game, invite your squad, and create a new high-score story.</p>
+        </div>
+        <a href="#game-library">Choose a game <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#"><span class="brand-mark">N<span>✦</span></span><span>NEON<span class="brand-accent">ARCADE</span></span></a>
+      <p>Made for players, powered by good vibes. <span>© 2025 Neon Arcade</span></p>
+      <a href="#discover">Back to top ↑</a>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
